@@ -1,0 +1,26 @@
+/* .scroll {
+
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 300px;
+  white-space:nowrap;
+  text-wrap: wrap;
+} */
+
+
+.scroll{
+  margin: 4px, 4px;
+  padding: 4px;
+       
+  width: 1100px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+
+  
+
+  
+
+

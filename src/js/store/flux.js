@@ -1,16 +1,16 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
+			characters: [
 				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
+					name: "Skywalker",
+					gender: "male",
+					eyeColor: "blue"
 				},
 				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
+					name: "Leia",
+					gender: "female",
+					eyeColor: "brown"
 				}
 			]
 		},
