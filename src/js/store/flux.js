@@ -1,17 +1,25 @@
+import React, { useState, useEffect, useContext } from "react";
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			characters: [
-				{
-					name: "Skywalker",
-					gender: "male",
-					eyeColor: "blue"
-				},
-				{
-					name: "Leia",
-					gender: "female",
-					eyeColor: "brown"
-				}
+				// {
+				// 	name: "Skywalker",
+				// 	gender: "male",
+				// 	hairColor: "black",
+				// 	eyeColor: "blue"
+				// },
+				// {
+				// 	name: "Leia",
+				// 	gender: "female",
+				// 	hairColor: "blue",
+				// 	eyeColor: "brown"
+				// }
+			],
+
+			planets: [
+				
+
 			]
 		},
 		actions: {
@@ -23,6 +31,21 @@ const getState = ({ getStore, getActions, setStore }) => {
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
+				
+				console.log("load some data funciona");
+				fetch("https://swapi.dev/api/people") 
+				.then((res) => res.json())
+				// .then((data) => console.log(data.results))
+				.then((data) => setStore({ characters: data.results }))
+				
+				fetch("https://swapi.dev/api/planets") 
+				.then((res) => res.json())
+				// .then((data) => console.log(data.results))
+				.then((data) => setStore({ planets: data.results }))
+				
+				
+
+				
 			},
 			changeColor: (index, color) => {
 				//get the store
