@@ -4,6 +4,7 @@ import "../../styles/home.css";
 import { Card } from "../component/card";
 import { Context } from "../store/appContext";
 import { CardPlanet } from "../component/cardPlanet";
+import { CardStarship } from "../component/cardStarship";
 
 
 
@@ -28,10 +29,8 @@ export const Home = () => {
         		<h1 className="text-danger">Characters</h1>
     		</div>
 
-			{/* {characters.map((item, index) => <p key={item.uid}>{item.name}</p>)}	 */}
-
 			<div  className={"scroll"} style={{display: 'inline-flex'}}>
-			{store.characters.map((item, index) => <Card name={item.name} gender={item.gender} eyeColor={item.eye_color} hairColor={item.hair_color}/>)}
+			{store.characters.map((item, index) => <Card  name={item.name} gender={item.gender} eyeColor={item.eye_color} hairColor={item.hair_color}/>)}
 			</div>
 
 			<div className="text-left mt-5">
@@ -45,13 +44,14 @@ export const Home = () => {
 			</div>
 			
 			<div className="text-left mt-5">
-        		<h1 className="text-danger">Planets</h1>
+        		<h1 className="text-danger">Starships</h1>
     		</div>
-			
 
+			<div  className={"scroll"} style={{display: 'inline-flex'}}>
 
+				{store.starships.map((item) => <CardStarship nameStarship={item.name} starship_class={item.starship_class} manufacturer={item.manufacturer} />)}	
 			
-			
+			</div>
 		
 		</div>
 	);
