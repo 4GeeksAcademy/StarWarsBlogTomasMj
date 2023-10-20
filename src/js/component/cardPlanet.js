@@ -18,7 +18,7 @@ export const CardPlanet = (props) => {
 				<h5 className="card-title">{props.namePlanet}</h5>
 				<p>Population: {props.population}</p>
 				<p>Terrain: {props.terrain}</p>
-				<Link to="#" className="btn btn-primary">Learn More!</Link> <button onClick={ () => actions.addFavorite(props.namePlanet)}>Favorites</button>
+				<Link to={`/planets/${props.created}`} className="btn btn-primary">Learn More!</Link> <button onClick={ () => actions.addFavorite(props.namePlanet)}>Favorites</button>
 			</div>
 		</div>
 

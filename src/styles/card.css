@@ -7,3 +7,19 @@
     text-wrap: wrap;
     
 }
+
+
+
+.favorite-vertical-right{animation:wobble-vertical-right .8s linear both} @keyframes wobble-vertical-right{0%,100%{transform:translateY(0) rotate(0);transform-origin:50% 50%}15%{transform:translateY(-30px) rotate(6deg)}30%{transform:translateY(15px) rotate(-6deg)}45%{transform:translateY(-15px) rotate(3.6deg)}60%{transform:translateY(9px) rotate(-2.4deg)}75%{transform:translateY(-6px) rotate(1.2deg)}}
+  
+  .favorite:hover {background-color: #3e8e41}
+  
+  .favorite:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+  .h{
+    text-align-last: justify;
+  }

@@ -17,7 +17,9 @@ export const Card = (props) => {
 				<p>Gender: {props.gender}</p>
 				<p>Hair color: {props.hairColor}</p>
 				<p>Eye color: {props.eyeColor}</p>
-				<Link to="#" className="btn btn-primary">Learn More!</Link> <button onClick={ () => actions.addFavorite(props.name)}>Favorites</button>
+				<div className={"h"}>
+				<Link to={`/characters/${props.created}`} className="btn btn-primary">Learn More!</Link> <button onClick={ () => actions.addFavorite(props.name)}><i className="far fa-heart favorite"></i></button>
+				</div>
 			</div>
 		</div>
 

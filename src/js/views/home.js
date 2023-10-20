@@ -12,16 +12,6 @@ export const Home = () => {
 	const { store, actions } = useContext(Context);
 	console.log();
 
-	// const [characters, setCharacters] = useState([])
-
-	// useEffect(()=>{
-	// 	// console.log("use effect activado..");
-	// 	fetch("https://swapi.dev/api/people") 
-	// 	.then((res) => res.json())
-	// 	// .then((data) => console.log(data.results))
-	// 	.then((data) => setCharacters(data.results))
-	// },[])
-
 	return (
 
 		<div className="container">
@@ -30,7 +20,7 @@ export const Home = () => {
     		</div>
 
 			<div  className={"scroll"} style={{display: 'inline-flex'}}>
-			{store.characters.map((item, index) => <Card  name={item.name} gender={item.gender} eyeColor={item.eye_color} hairColor={item.hair_color}/>)}
+			{store.characters.map((item, index) => <Card  name={item.name} gender={item.gender} eyeColor={item.eye_color} hairColor={item.hair_color} created={item.created}/>)}
 			</div>
 
 			<div className="text-left mt-5">
@@ -39,7 +29,7 @@ export const Home = () => {
 
 			<div  className={"scroll"} style={{display: 'inline-flex'}}>
 
-				{store.planets.map((item) => <CardPlanet namePlanet={item.name} population={item.population} terrain={item.terrain} />)}
+				{store.planets.map((item) => <CardPlanet namePlanet={item.name} population={item.population} terrain={item.terrain} created={item.created} />)}
 			
 			</div>
 			
@@ -49,7 +39,7 @@ export const Home = () => {
 
 			<div  className={"scroll"} style={{display: 'inline-flex'}}>
 
-				{store.starships.map((item) => <CardStarship nameStarship={item.name} starship_class={item.starship_class} manufacturer={item.manufacturer} />)}	
+				{store.starships.map((item) => <CardStarship nameStarship={item.name} starship_class={item.starship_class} manufacturer={item.manufacturer} created={item.created}/>)}	
 			
 			</div>
 		

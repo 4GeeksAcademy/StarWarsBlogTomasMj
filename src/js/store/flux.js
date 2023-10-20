@@ -3,11 +3,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			characters:[],
-
 			planets: [],
 			starships:[],
-			message: "Inicializando desde flux",
-			nombresCambiados: [],
 			favorites: [],
 		},
 		actions: {
@@ -56,23 +53,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				// .then((data) => console.log(data.results))
 				.then((data) => setStore({ starships: data.results }))
 				
-
-				
 			},
-			// changeColor: (index, color) => {
-			// 	//get the store
-			// 	const store = getStore();
-
-			// 	//we have to loop the entire demo array to look for the respective index
-			// 	//and change its color
-			// 	const demo = store.demo.map((elm, i) => {
-			// 		if (i === index) elm.background = color;
-			// 		return elm;
-			// 	});
-
-			// 	//reset the global store
-			// 	setStore({ demo: demo });
-			// }
+			
 		}
 	};
 };

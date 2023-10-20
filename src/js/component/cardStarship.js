@@ -19,7 +19,7 @@ export const CardStarship = (props) => {
 				<p>StarShip Class: {props.starship_class}</p>
 				<p>Manufacturer: {props.manufacturer}</p>
 				
-				<Link to="#" className="btn btn-primary">Learn More!</Link> 
+				<Link to={`/startships/${props.created}`} className="btn btn-primary">Learn More!</Link> 
 				<button onClick={ () => actions.addFavorite(props.nameStarship)}>Favorites</button>
 			</div>
 		</div>
